@@ -1,0 +1,113 @@
+<svg width="420" height="100" viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="code-grad" x1="22" y1="32" x2="78" y2="68" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#111124"/>
+      <stop offset="100%" stop-color="#080812"/>
+    </linearGradient>
+    <linearGradient id="border-grad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B7DEB" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#1E1E38" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F1F1F8"/>
+      <stop offset="100%" stop-color="#C8C8E8"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="dots" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="0.6" fill="#3B7DEB" opacity="0.25"/>
+    </pattern>
+    <clipPath id="icon-clip">
+      <rect x="0" y="0" width="100" height="100" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <!-- Full dark background -->
+  <rect width="420" height="100" fill="#050508"/>
+
+  <!-- ══════════ ICON MARK ══════════ -->
+
+  <!-- Outer glow halo -->
+  <rect x="-3" y="-3" width="106" height="106" rx="23" fill="#2563EB" opacity="0.07" filter="url(#soft-glow)"/>
+
+  <!-- Icon background -->
+  <rect x="0" y="0" width="100" height="100" rx="20" fill="url(#bg-grad)"/>
+
+  <!-- Dot grid inside icon -->
+  <rect x="0" y="0" width="100" height="100" rx="20" fill="url(#dots)" clip-path="url(#icon-clip)"/>
+
+  <!-- Blue ambient glow blob -->
+  <ellipse cx="50" cy="52" rx="34" ry="22" fill="#2563EB" opacity="0.09" clip-path="url(#icon-clip)"/>
+
+  <!-- Icon border -->
+  <rect x="0.75" y="0.75" width="98.5" height="98.5" rx="19.5" fill="none" stroke="url(#border-grad)" stroke-width="1.5"/>
+
+  <!-- < bracket -->
+  <path d="M 37 32 L 22 50 L 37 68"
+    stroke="url(#code-grad)"
+    stroke-width="3.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+    filter="url(#glow)"/>
+
+  <!-- / slash -->
+  <path d="M 47 68 L 53 32"
+    stroke="url(#code-grad)"
+    stroke-width="3.5"
+    stroke-linecap="round"
+    fill="none"
+    filter="url(#glow)"/>
+
+  <!-- > bracket -->
+  <path d="M 63 32 L 78 50 L 63 68"
+    stroke="url(#code-grad)"
+    stroke-width="3.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+    filter="url(#glow)"/>
+
+  <!-- ══════════ WORDMARK ══════════ -->
+
+  <!-- Thin vertical separator -->
+  <line x1="118" y1="22" x2="118" y2="78" stroke="#1E1E38" stroke-width="1"/>
+
+  <!-- CODEX -->
+  <text
+    x="132" y="67"
+    font-family="'Arial Black', 'Impact', 'Haettenschweiler', sans-serif"
+    font-size="60"
+    font-weight="900"
+    fill="url(#text-grad)"
+    letter-spacing="-2">CODEX</text>
+
+  <!-- Accent dot after X -->
+  <circle cx="408" cy="40" r="4" fill="#2563EB" opacity="0.9"/>
+
+  <!-- Tagline -->
+  <text
+    x="133" y="85"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="10.5"
+    font-weight="400"
+    fill="#4A4A80"
+    letter-spacing="5.8">IT-АГЕНТСТВО</text>
+
+</svg>

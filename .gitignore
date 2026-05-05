@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+
+# env
+.env
+.env.local
+.env.*.local
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+next-env.d.ts
+
+# claude code
+.claude/
+
+# scripts (не нужны в проде)
+scripts/

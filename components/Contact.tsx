@@ -73,7 +73,7 @@ export default function Contact() {
 
                 <div className="flex flex-col gap-4">
                   <a
-                    href="https://t.me/YOUR_TELEGRAM"
+                    href="https://t.me/codex_business"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-5 rounded-2xl group transition-all"
@@ -88,13 +88,13 @@ export default function Contact() {
                     <div>
                       <div className="font-semibold text-white text-sm">Telegram</div>
                       <div className="text-sm" style={{ color: 'var(--text-2)' }}>
-                        @codex_agency
+                        @codex_business
                       </div>
                     </div>
                   </a>
 
                   <a
-                    href="tel:+7XXXXXXXXXX"
+                    href="tel:+79600930054"
                     className="flex items-center gap-4 p-5 rounded-2xl group transition-all"
                     style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
                   >
@@ -107,7 +107,7 @@ export default function Contact() {
                     <div>
                       <div className="font-semibold text-white text-sm">Телефон</div>
                       <div className="text-sm" style={{ color: 'var(--text-2)' }}>
-                        +7 (XXX) XXX-XX-XX
+                        +7 (960) 093-00-54
                       </div>
                     </div>
                   </a>

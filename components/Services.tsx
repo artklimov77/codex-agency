@@ -1,60 +1,65 @@
-import { MousePointerClick, LayoutTemplate, ShoppingBag, Bot, Workflow, Wrench } from 'lucide-react'
+import { MousePointerClick, BarChart3, Workflow, Server, ShoppingBag, Search } from 'lucide-react'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
 
 const SERVICES = [
   {
     icon: MousePointerClick,
-    title: 'Лендинги',
+    title: 'Сайт-машина продаж',
     description:
-      'Одностраничный сайт под рекламу или запуск продукта: структура, тексты, дизайн и форма заявок прямо в Telegram.',
-    tags: ['Квиз', 'Заявки в Telegram', 'Метрика'],
+      'Не визитка в интернете, а инструмент привлечения клиентов. Лендинги, корпоративные сайты и интернет-магазины с конверсией в заявки.',
+    tags: ['Лендинг', 'Корп. сайт', 'Интернет-магазин'],
   },
   {
-    icon: LayoutTemplate,
-    title: 'Сайты компаний',
+    icon: BarChart3,
+    title: 'CRM и воронка продаж',
     description:
-      'Многостраничный сайт с услугами, портфолио и контактами. Быстро грузится, хорошо индексируется, легко дополнять.',
-    tags: ['SEO', 'Адаптив', 'Блог'],
-  },
-  {
-    icon: ShoppingBag,
-    title: 'Интернет-магазины',
-    description:
-      'Каталог, корзина, онлайн-оплата и уведомления о заказах. Для небольших и средних каталогов.',
-    tags: ['Каталог', 'Оплата', 'Доставка'],
-  },
-  {
-    icon: Bot,
-    title: 'Telegram-боты',
-    description:
-      'Запись клиентов, приём заявок, ответы на частые вопросы, рассылки. Работают 24/7 вместо администратора.',
-    tags: ['Запись', 'Оплата', 'Рассылки'],
+      'Система учёта клиентов, которая не теряет ни одну заявку. Настройка Bitrix24, AmoCRM или разработка с нуля под вашу специфику.',
+    tags: ['Bitrix24', 'AmoCRM', 'Custom CRM'],
   },
   {
     icon: Workflow,
-    title: 'CRM и интеграции',
+    title: 'Автоматизация процессов',
     description:
-      'Связываем сайт, CRM, таблицы и мессенджеры — заявки не теряются и не переносятся руками.',
-    tags: ['amoCRM', 'Bitrix24', 'Google Sheets'],
+      'Убираем рутину: боты, интеграции между сервисами, автоматические уведомления, синхронизация данных. Люди занимаются людьми, не таблицами.',
+    tags: ['Боты', 'Интеграции', 'Уведомления'],
   },
   {
-    icon: Wrench,
-    title: 'Поддержка и доработка',
+    icon: Server,
+    title: 'Корпоративные системы',
     description:
-      'Берём на поддержку существующие сайты: исправим ошибки, ускорим загрузку, добавим новые функции.',
-    tags: ['Ускорение', 'Правки', 'Хостинг'],
+      'Внутренние порталы, ERP, системы управления проектами и документооборотом. Для компаний, которым нужен серьёзный инструмент.',
+    tags: ['ERP', 'Порталы', 'Документооборот'],
+  },
+  {
+    icon: ShoppingBag,
+    title: 'Онлайн-сервисы',
+    description:
+      'Системы доставки, онлайн-бронирования, личные кабинеты, маркетплейсы. Любой сценарий взаимодействия с вашим клиентом.',
+    tags: ['Бронирование', 'Доставка', 'Маркетплейс'],
+  },
+  {
+    icon: Search,
+    title: 'Аудит и стратегия',
+    description:
+      'Разбираем текущую цифровую инфраструктуру, ищем точки роста и даём конкретную дорожную карту. Без воды, только действия.',
+    tags: ['Аудит', 'Стратегия', 'Дорожная карта'],
   },
 ]
 
 export default function Services() {
   return (
-    <section className="section bg-surface" id="services">
+    <section className="section" id="services">
       <div className="container">
         <SectionHeading
-          badge="Услуги"
-          title="Что мы делаем"
-          subtitle="Не «сайт ради сайта», а инструменты, которые решают конкретную задачу: привести заявку, принять заказ, снять рутину."
+          badge="Что мы делаем"
+          title="Решаем задачи бизнеса"
+          subtitle={
+            <>
+              Не «разработка сайтов», а конкретные инструменты,
+              <br className="hidden sm:block" /> которые решают конкретные проблемы.
+            </>
+          }
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
@@ -65,7 +70,7 @@ export default function Services() {
                 <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 bg-accent-soft text-accent-fg">
                   <Icon size={22} />
                 </div>
-                <h3 className="text-lg font-bold text-fg mb-2">{svc.title}</h3>
+                <h3 className="text-lg font-bold text-fg mb-3">{svc.title}</h3>
                 <p className="text-sm leading-relaxed mb-5 text-muted">{svc.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {svc.tags.map((tag) => (

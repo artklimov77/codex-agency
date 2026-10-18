@@ -43,13 +43,15 @@ export default function Contact() {
 
           <div className="relative grid lg:grid-cols-2 gap-10 lg:gap-16 p-6 sm:p-10 lg:p-14">
             <Reveal>
-              <span className="badge mb-5">Связаться</span>
+              <span className="badge mb-5">Связаться с нами</span>
               <h2 className="text-[32px] leading-[1.1] md:text-5xl font-bold tracking-tight text-fg mb-4">
-                Расскажите о задаче
+                Расскажите
+                <br />
+                о задаче
               </h2>
               <p className="text-base md:text-lg mb-8 leading-relaxed text-muted">
-                Ответим в течение 30 минут в рабочее время и предложим решение. Без навязчивых продаж —
-                если задача не наша, так и скажем.
+                Опишите, что хотите получить — ответим в течение 30 минут и предложим конкретное решение.
+                Без навязчивых продаж.
               </p>
 
               <div className="flex flex-col gap-3">
@@ -88,8 +90,8 @@ export default function Contact() {
                   <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-emerald-500/15 text-emerald-500">
                     <CheckCircle2 size={32} />
                   </div>
-                  <h3 className="text-2xl font-bold text-fg">Заявка отправлена!</h3>
-                  <p className="text-muted">Ответим в ближайшее время.</p>
+                  <h3 className="text-2xl font-bold text-fg">Отправлено!</h3>
+                  <p className="text-muted">Ответим в ближайшие 30 минут.</p>
                   <button type="button" onClick={() => setState('idle')} className="btn-secondary mt-4">
                     Отправить ещё
                   </button>
@@ -105,7 +107,7 @@ export default function Contact() {
                       type="text"
                       required
                       autoComplete="name"
-                      placeholder="Иван"
+                      placeholder="Иван Иванов"
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
                       className="field"
@@ -119,7 +121,7 @@ export default function Contact() {
                       id="contact-field"
                       type="text"
                       required
-                      placeholder="+7 900 000-00-00 или @username"
+                      placeholder="+7 (900) 000-00-00 или @username"
                       value={form.contact}
                       onChange={(e) => setForm({ ...form, contact: e.target.value })}
                       className="field"
@@ -127,12 +129,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2 text-fg">
-                      Коротко о задаче
+                      Опишите задачу
                     </label>
                     <textarea
                       id="message"
                       rows={4}
-                      placeholder="Нужен сайт для кофейни с меню и онлайн-заказом..."
+                      placeholder="Нужен сайт для ресторана, онлайн-запись, интеграция с меню..."
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
                       className="field resize-none"
@@ -141,7 +143,7 @@ export default function Contact() {
 
                   {state === 'error' && (
                     <p className="text-sm text-red-500">
-                      Не получилось отправить. Напишите нам напрямую в Telegram — {CONTACTS.telegram}.
+                      Что-то пошло не так. Напишите нам напрямую в Telegram.
                     </p>
                   )}
 

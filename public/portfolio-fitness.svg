@@ -1,0 +1,116 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="f-blur-xl" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+    <filter id="f-blur-lg" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="45"/>
+    </filter>
+    <filter id="f-blur-md" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <linearGradient id="f-overlay" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#030507" stop-opacity="1"/>
+      <stop offset="45%" stop-color="#030507" stop-opacity="0.85"/>
+      <stop offset="70%" stop-color="#030507" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#030507" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="f-bottom" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#030507" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#030507" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="f-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#030507" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#030507" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="f-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#E8FF00"/>
+      <stop offset="100%" stop-color="#AACC00"/>
+    </linearGradient>
+    <linearGradient id="f-nav-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#030507" stop-opacity="0.97"/>
+      <stop offset="100%" stop-color="#030507" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- BG -->
+  <rect width="1440" height="900" fill="#030507"/>
+
+  <!-- Muscular body / gym silhouette light -->
+  <ellipse cx="1050" cy="450" rx="600" ry="500" fill="#0A1A0A" filter="url(#f-blur-xl)"/>
+  <ellipse cx="1150" cy="300" rx="350" ry="280" fill="#1A3A05" filter="url(#f-blur-lg)" opacity="0.9"/>
+  <ellipse cx="950"  cy="550" rx="280" ry="250" fill="#0D2800" filter="url(#f-blur-lg)" opacity="0.7"/>
+  <ellipse cx="1300" cy="200" rx="220" ry="180" fill="#C8E000" filter="url(#f-blur-lg)" opacity="0.12"/>
+  <ellipse cx="1380" cy="600" rx="180" ry="300" fill="#2A5000" filter="url(#f-blur-lg)" opacity="0.5"/>
+  <ellipse cx="800"  cy="700" rx="300" ry="200" fill="#050F02" filter="url(#f-blur-md)" opacity="0.6"/>
+
+  <!-- Overlay -->
+  <rect width="1440" height="900" fill="url(#f-overlay)"/>
+  <rect width="1440" height="100" fill="url(#f-top)" opacity="0.6"/>
+  <rect x="0" y="760" width="1440" height="140" fill="url(#f-bottom)"/>
+
+  <!-- NAV -->
+  <rect width="1440" height="80" fill="url(#f-nav-bg)"/>
+  <text x="72" y="44" font-family="'Arial Black',Arial,sans-serif" font-size="26" font-weight="900" fill="#FFFFFF" letter-spacing="4">IRON<tspan fill="url(#f-accent)">FIT</tspan></text>
+  <text x="72" y="62" font-family="Arial,sans-serif" font-size="8" fill="#556644" letter-spacing="5">PREMIUM FITNESS CLUB</text>
+
+  <text x="480" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AABBAA" letter-spacing="2">Тренировки</text>
+  <text x="600" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AABBAA" letter-spacing="2">Тренеры</text>
+  <text x="710" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AABBAA" letter-spacing="2">Расписание</text>
+  <text x="840" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AABBAA" letter-spacing="2">Цены</text>
+  <text x="940" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AABBAA" letter-spacing="2">Контакты</text>
+
+  <rect x="1240" y="22" width="168" height="38" rx="0" fill="url(#f-accent)"/>
+  <text x="1324" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#0A1200" letter-spacing="2">ПРОБНАЯ НЕДЕЛЯ</text>
+
+  <line x1="0" y1="80" x2="1440" y2="80" stroke="#C8E000" stroke-width="0.4" opacity="0.2"/>
+
+  <!-- HERO -->
+  <text x="72" y="172" font-family="Arial,sans-serif" font-size="10" fill="url(#f-accent)" letter-spacing="5">— МОСКВА · ОТКРЫТ 24/7</text>
+
+  <text x="72" y="290" font-family="'Arial Black',Arial,sans-serif" font-size="98" font-weight="900" fill="#FFFFFF" letter-spacing="-3">СТАНЬ</text>
+  <text x="72" y="400" font-family="'Arial Black',Arial,sans-serif" font-size="98" font-weight="900" fill="#FFFFFF" letter-spacing="-3">СИЛЬНЕЕ</text>
+  <text x="72" y="510" font-family="'Arial Black',Arial,sans-serif" font-size="98" font-weight="900" fill="url(#f-accent)" letter-spacing="-3">СЕГОДНЯ</text>
+
+  <text x="72" y="556" font-family="Arial,sans-serif" font-size="14" fill="#6A8855" letter-spacing="3">1 200 м²  ·  42 тренажёра  ·  18 программ</text>
+
+  <line x1="72" y1="575" x2="400" y2="575" stroke="#C8E000" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- CTAs -->
+  <rect x="72"  y="596" width="240" height="54" fill="url(#f-accent)"/>
+  <text x="192" y="628" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#0A1200" letter-spacing="2">НАЧАТЬ БЕСПЛАТНО</text>
+
+  <rect x="328" y="596" width="200" height="54" fill="none" stroke="#4A6630" stroke-width="1"/>
+  <text x="428" y="628" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#AABBAA" letter-spacing="2">РАСПИСАНИЕ</text>
+
+  <!-- Stats row -->
+  <text x="72"  y="698" font-family="'Arial Black',Arial,sans-serif" font-size="36" font-weight="900" fill="#FFFFFF">3 500</text>
+  <text x="72"  y="718" font-family="Arial,sans-serif" font-size="10" fill="#4A6630" letter-spacing="2">УЧАСТНИКОВ</text>
+
+  <line x1="220" y1="685" x2="220" y2="730" stroke="#2A4020" stroke-width="1"/>
+
+  <text x="240" y="698" font-family="'Arial Black',Arial,sans-serif" font-size="36" font-weight="900" fill="#FFFFFF">24/7</text>
+  <text x="240" y="718" font-family="Arial,sans-serif" font-size="10" fill="#4A6630" letter-spacing="2">БЕЗ ВЫХОДНЫХ</text>
+
+  <line x1="370" y1="685" x2="370" y2="730" stroke="#2A4020" stroke-width="1"/>
+
+  <text x="390" y="698" font-family="'Arial Black',Arial,sans-serif" font-size="36" font-weight="900" fill="#FFFFFF">15</text>
+  <text x="390" y="718" font-family="Arial,sans-serif" font-size="10" fill="#4A6630" letter-spacing="2">ТРЕНЕРОВ</text>
+
+  <!-- Decorative corner -->
+  <line x1="1340" y1="100" x2="1420" y2="100" stroke="#C8E000" stroke-width="1" opacity="0.2"/>
+  <line x1="1420" y1="100" x2="1420" y2="180" stroke="#C8E000" stroke-width="1" opacity="0.2"/>
+  <line x1="1340" y1="800" x2="1420" y2="800" stroke="#C8E000" stroke-width="1" opacity="0.2"/>
+  <line x1="1420" y1="800" x2="1420" y2="720" stroke="#C8E000" stroke-width="1" opacity="0.2"/>
+
+  <!-- Bottom strip -->
+  <line x1="0" y1="820" x2="1440" y2="820" stroke="#C8E000" stroke-width="0.5" opacity="0.15"/>
+  <text x="240"  y="852" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="url(#f-accent)" letter-spacing="3">КАРДИО</text>
+  <text x="240"  y="870" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#3A5525" letter-spacing="2">20+ ДОРОЖЕК И БАЙКОВ</text>
+  <line x1="480" y1="828" x2="480" y2="888" stroke="#C8E000" stroke-width="0.5" opacity="0.12"/>
+  <text x="720"  y="852" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="url(#f-accent)" letter-spacing="3">СИЛОВАЯ</text>
+  <text x="720"  y="870" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#3A5525" letter-spacing="2">СВОБОДНЫЕ ВЕСА · ТРЕНАЖЁРЫ</text>
+  <line x1="960" y1="828" x2="960" y2="888" stroke="#C8E000" stroke-width="0.5" opacity="0.12"/>
+  <text x="1200" y="852" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="url(#f-accent)" letter-spacing="3">ГРУППОВЫЕ</text>
+  <text x="1200" y="870" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#3A5525" letter-spacing="2">YOGA · BOXING · HIIT</text>
+</svg>

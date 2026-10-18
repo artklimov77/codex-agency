@@ -1,9 +1,10 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
-import Stats from '@/components/Stats'
-import Segments from '@/components/Segments'
+import Advantages from '@/components/Advantages'
 import Services from '@/components/Services'
 import Cases from '@/components/Cases'
+import Comparison from '@/components/Comparison'
+import Pricing from '@/components/Pricing'
 import Process from '@/components/Process'
 import FAQ from '@/components/FAQ'
 import Contact from '@/components/Contact'
@@ -15,10 +16,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Stats />
-        <Segments />
+        <Advantages />
         <Services />
         <Cases />
+        <Comparison />
+        <Pricing />
         <Process />
         <FAQ />
         <Contact />

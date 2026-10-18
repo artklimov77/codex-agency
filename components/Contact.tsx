@@ -1,8 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Send, MessageCircle, Phone, CheckCircle2 } from 'lucide-react'
+import Reveal from './Reveal'
+import { CONTACTS } from './site'
 
 type FormState = 'idle' | 'loading' | 'success' | 'error'
 
@@ -32,204 +33,138 @@ export default function Contact() {
   }
 
   return (
-    <section className="section" id="contact">
+    <section className="section !pt-0 md:!pt-0" id="contact">
       <div className="container">
-        <div className="relative rounded-3xl overflow-hidden">
-          {/* Background glow */}
+        <div className="relative rounded-3xl overflow-hidden border border-line bg-card shadow-card">
           <div
             className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                'radial-gradient(ellipse at 50% 0%, rgba(37,99,235,0.15) 0%, transparent 60%)',
-            }}
-          />
-          <div
-            className="absolute inset-0 bg-dot-grid pointer-events-none"
-            style={{ opacity: 0.5 }}
+            style={{ background: 'radial-gradient(ellipse at 0% 0%, var(--hero-glow) 0%, transparent 55%)' }}
           />
 
-          <div
-            className="relative"
-            style={{ border: '1px solid var(--border)', borderRadius: 24, padding: '64px 32px' }}
-          >
-            <div className="grid lg:grid-cols-2 gap-16 items-start max-w-5xl mx-auto">
-              {/* Left */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <span className="badge mb-6">Связаться с нами</span>
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
-                  Расскажите
-                  <br />
-                  о задаче
-                </h2>
-                <p className="text-lg mb-10 leading-relaxed" style={{ color: 'var(--text-2)' }}>
-                  Опишите, что хотите получить — ответим в течение 30 минут
-                  и предложим конкретное решение. Без навязчивых продаж.
-                </p>
+          <div className="relative grid lg:grid-cols-2 gap-10 lg:gap-16 p-6 sm:p-10 lg:p-14">
+            <Reveal>
+              <span className="badge mb-5">Связаться</span>
+              <h2 className="text-[32px] leading-[1.1] md:text-5xl font-bold tracking-tight text-fg mb-4">
+                Расскажите о задаче
+              </h2>
+              <p className="text-base md:text-lg mb-8 leading-relaxed text-muted">
+                Ответим в течение 30 минут в рабочее время и предложим решение. Без навязчивых продаж —
+                если задача не наша, так и скажем.
+              </p>
 
-                <div className="flex flex-col gap-4">
-                  <a
-                    href="https://t.me/codex_business"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-5 rounded-2xl group transition-all"
-                    style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
-                  >
-                    <div
-                      className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
-                      style={{ background: 'rgba(37,99,235,0.12)', color: '#60A5FA' }}
-                    >
-                      <MessageCircle size={22} />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white text-sm">Telegram</div>
-                      <div className="text-sm" style={{ color: 'var(--text-2)' }}>
-                        @codex_business
-                      </div>
-                    </div>
-                  </a>
+              <div className="flex flex-col gap-3">
+                <a
+                  href={CONTACTS.telegramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 rounded-2xl border border-line bg-page hover:border-line-strong transition-colors"
+                >
+                  <span className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 bg-accent-soft text-accent-fg">
+                    <MessageCircle size={22} />
+                  </span>
+                  <span>
+                    <span className="block font-semibold text-fg text-sm">Telegram</span>
+                    <span className="block text-sm text-muted">{CONTACTS.telegram}</span>
+                  </span>
+                </a>
+                <a
+                  href={CONTACTS.phoneHref}
+                  className="flex items-center gap-4 p-4 rounded-2xl border border-line bg-page hover:border-line-strong transition-colors"
+                >
+                  <span className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 bg-accent-soft text-accent-fg">
+                    <Phone size={22} />
+                  </span>
+                  <span>
+                    <span className="block font-semibold text-fg text-sm">Телефон</span>
+                    <span className="block text-sm text-muted">{CONTACTS.phone}</span>
+                  </span>
+                </a>
+              </div>
+            </Reveal>
 
-                  <a
-                    href="tel:+79600930054"
-                    className="flex items-center gap-4 p-5 rounded-2xl group transition-all"
-                    style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
-                  >
-                    <div
-                      className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
-                      style={{ background: 'rgba(37,99,235,0.12)', color: '#60A5FA' }}
-                    >
-                      <Phone size={22} />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white text-sm">Телефон</div>
-                      <div className="text-sm" style={{ color: 'var(--text-2)' }}>
-                        +7 (960) 093-00-54
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </motion.div>
-
-              {/* Right — form */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-              >
-                {state === 'success' ? (
-                  <div className="flex flex-col items-center justify-center h-full gap-4 py-12 text-center">
-                    <div
-                      className="w-16 h-16 rounded-2xl flex items-center justify-center"
-                      style={{ background: 'rgba(16,185,129,0.12)', color: '#10B981' }}
-                    >
-                      <CheckCircle2 size={32} />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white">Отправлено!</h3>
-                    <p style={{ color: 'var(--text-2)' }}>
-                      Ответим в ближайшие 30 минут.
-                    </p>
-                    <button
-                      onClick={() => setState('idle')}
-                      className="btn-secondary mt-4"
-                    >
-                      Отправить ещё
-                    </button>
+            <Reveal delay={0.1}>
+              {state === 'success' ? (
+                <div className="flex flex-col items-center justify-center h-full gap-4 py-12 text-center">
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-emerald-500/15 text-emerald-500">
+                    <CheckCircle2 size={32} />
                   </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                    <div>
-                      <label className="block text-sm font-medium mb-2 text-white">
-                        Ваше имя *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Иван Иванов"
-                        value={form.name}
-                        onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl text-white placeholder:text-[var(--text-3)] outline-none transition-all text-sm"
-                        style={{
-                          background: 'var(--card)',
-                          border: '1px solid var(--border)',
-                        }}
-                        onFocus={(e) => (e.currentTarget.style.borderColor = 'var(--accent)')}
-                        onBlur={(e) => (e.currentTarget.style.borderColor = 'var(--border)')}
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2 text-white">
-                        Телефон или Telegram *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="+7 (900) 000-00-00 или @username"
-                        value={form.contact}
-                        onChange={(e) => setForm({ ...form, contact: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl text-white placeholder:text-[var(--text-3)] outline-none transition-all text-sm"
-                        style={{
-                          background: 'var(--card)',
-                          border: '1px solid var(--border)',
-                        }}
-                        onFocus={(e) => (e.currentTarget.style.borderColor = 'var(--accent)')}
-                        onBlur={(e) => (e.currentTarget.style.borderColor = 'var(--border)')}
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2 text-white">
-                        Опишите задачу
-                      </label>
-                      <textarea
-                        rows={4}
-                        placeholder="Нужен сайт для ресторана, онлайн-запись, интеграция с меню..."
-                        value={form.message}
-                        onChange={(e) => setForm({ ...form, message: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl text-white placeholder:text-[var(--text-3)] outline-none transition-all text-sm resize-none"
-                        style={{
-                          background: 'var(--card)',
-                          border: '1px solid var(--border)',
-                        }}
-                        onFocus={(e) => (e.currentTarget.style.borderColor = 'var(--accent)')}
-                        onBlur={(e) => (e.currentTarget.style.borderColor = 'var(--border)')}
-                      />
-                    </div>
+                  <h3 className="text-2xl font-bold text-fg">Заявка отправлена!</h3>
+                  <p className="text-muted">Ответим в ближайшее время.</p>
+                  <button type="button" onClick={() => setState('idle')} className="btn-secondary mt-4">
+                    Отправить ещё
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2 text-fg">
+                      Ваше имя *
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      required
+                      autoComplete="name"
+                      placeholder="Иван"
+                      value={form.name}
+                      onChange={(e) => setForm({ ...form, name: e.target.value })}
+                      className="field"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="contact-field" className="block text-sm font-medium mb-2 text-fg">
+                      Телефон или Telegram *
+                    </label>
+                    <input
+                      id="contact-field"
+                      type="text"
+                      required
+                      placeholder="+7 900 000-00-00 или @username"
+                      value={form.contact}
+                      onChange={(e) => setForm({ ...form, contact: e.target.value })}
+                      className="field"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium mb-2 text-fg">
+                      Коротко о задаче
+                    </label>
+                    <textarea
+                      id="message"
+                      rows={4}
+                      placeholder="Нужен сайт для кофейни с меню и онлайн-заказом..."
+                      value={form.message}
+                      onChange={(e) => setForm({ ...form, message: e.target.value })}
+                      className="field resize-none"
+                    />
+                  </div>
 
-                    {state === 'error' && (
-                      <p className="text-sm text-red-400">
-                        Что-то пошло не так. Напишите нам напрямую в Telegram.
-                      </p>
-                    )}
-
-                    <button
-                      type="submit"
-                      disabled={state === 'loading'}
-                      className="btn-primary justify-center mt-2"
-                    >
-                      {state === 'loading' ? (
-                        <>
-                          <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                          Отправляем...
-                        </>
-                      ) : (
-                        <>
-                          Отправить заявку
-                          <Send size={16} />
-                        </>
-                      )}
-                    </button>
-
-                    <p className="text-xs text-center" style={{ color: 'var(--text-3)' }}>
-                      Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+                  {state === 'error' && (
+                    <p className="text-sm text-red-500">
+                      Не получилось отправить. Напишите нам напрямую в Telegram — {CONTACTS.telegram}.
                     </p>
-                  </form>
-                )}
-              </motion.div>
-            </div>
+                  )}
+
+                  <button type="submit" disabled={state === 'loading'} className="btn-primary w-full mt-1">
+                    {state === 'loading' ? (
+                      <>
+                        <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        Отправляем...
+                      </>
+                    ) : (
+                      <>
+                        Отправить заявку
+                        <Send size={16} />
+                      </>
+                    )}
+                  </button>
+
+                  <p className="text-xs text-center text-subtle">
+                    Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+                  </p>
+                </form>
+              )}
+            </Reveal>
           </div>
         </div>
       </div>

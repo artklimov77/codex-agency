@@ -2,108 +2,94 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
-
-const navLinks = [
-  { label: 'Услуги', href: '#services' },
-  { label: 'Кейсы', href: '#cases' },
-  { label: 'Как работаем', href: '#process' },
-  { label: 'FAQ', href: '#faq' },
-]
+import { Menu, X, ArrowRight } from 'lucide-react'
+import Logo from './Logo'
+import ThemeToggle from './ThemeToggle'
+import { NAV_LINKS } from './site'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll)
+    const onScroll = () => setScrolled(window.scrollY > 10)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  const solid = scrolled || menuOpen
+
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
-      style={{
-        background: scrolled
-          ? 'rgba(5, 5, 8, 0.85)'
-          : 'transparent',
-        backdropFilter: scrolled ? 'blur(20px)' : 'none',
-        borderBottom: scrolled ? '1px solid var(--border)' : '1px solid transparent',
-      }}
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 border-b ${
+        solid ? 'border-line backdrop-blur-xl' : 'border-transparent'
+      }`}
+      style={{ background: solid ? 'var(--header-bg)' : 'transparent' }}
     >
       <div className="container">
-        <div className="flex items-center justify-between h-[72px]">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <span
-              className="text-[11px] font-mono text-blue-400 opacity-70 group-hover:opacity-100 transition-opacity"
-              style={{ letterSpacing: 2 }}
-            >
-              &lt;/&gt;
-            </span>
-            <span className="text-xl font-bold tracking-tight text-white">
-              Codex
-            </span>
-          </a>
+        <div className="flex items-center justify-between h-16 md:h-[72px] gap-4">
+          <Logo />
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+          <nav className="hidden lg:flex items-center gap-8">
+            {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium transition-colors duration-200"
-                style={{ color: 'var(--text-2)' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--text)')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-2)')}
+                className="text-sm font-medium text-muted hover:text-fg transition-colors"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* CTA */}
-          <a href="#contact" className="hidden md:inline-flex btn-primary text-sm py-[10px] px-5">
-            Обсудить проект
-          </a>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 rounded-lg transition-colors"
-            style={{ color: 'var(--text-2)' }}
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <a href="#contact" className="hidden lg:inline-flex btn-primary text-sm !py-2.5 !px-5">
+              Обсудить проект
+            </a>
+            <button
+              type="button"
+              className="lg:hidden w-10 h-10 rounded-xl flex items-center justify-center border border-line bg-card text-fg"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label={menuOpen ? 'Закрыть меню' : 'Открыть меню'}
+              aria-expanded={menuOpen}
+            >
+              {menuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            style={{ background: 'rgba(5, 5, 8, 0.98)', borderTop: '1px solid var(--border)' }}
+            transition={{ duration: 0.25 }}
+            className="lg:hidden overflow-hidden border-t border-line"
           >
-            <div className="container py-6 flex flex-col gap-4">
-              {navLinks.map((link) => (
+            <nav className="container py-4 flex flex-col">
+              {NAV_LINKS.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-base font-medium py-2"
-                  style={{ color: 'var(--text-2)' }}
+                  className="flex items-center justify-between py-3.5 text-base font-medium text-fg border-b border-line last:border-b-0"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
+                  <ArrowRight size={16} className="text-subtle" />
                 </a>
               ))}
-              <a href="#contact" className="btn-primary text-sm mt-2" onClick={() => setMenuOpen(false)}>
+              <a
+                href="#contact"
+                className="btn-primary w-full mt-4 mb-2"
+                onClick={() => setMenuOpen(false)}
+              >
                 Обсудить проект
               </a>
-            </div>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>

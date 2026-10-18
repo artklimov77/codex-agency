@@ -1,0 +1,129 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="r-blur-xl" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+    <filter id="r-blur-lg" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="45"/>
+    </filter>
+    <filter id="r-blur-md" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <linearGradient id="r-overlay" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#040608" stop-opacity="1"/>
+      <stop offset="42%" stop-color="#040608" stop-opacity="0.9"/>
+      <stop offset="68%" stop-color="#040608" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#040608" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="r-bottom" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#040608" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#040608" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="r-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#040608" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#040608" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="r-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#C8A870"/>
+      <stop offset="100%" stop-color="#E8CC90"/>
+    </linearGradient>
+    <linearGradient id="r-nav-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#040608" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#040608" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- BG — sky + glass building tones -->
+  <rect width="1440" height="900" fill="#050709"/>
+
+  <!-- Building glass reflections / sky -->
+  <ellipse cx="1100" cy="300" rx="700" ry="500" fill="#0A1522" filter="url(#r-blur-xl)"/>
+  <ellipse cx="1200" cy="150" rx="400" ry="250" fill="#0E2040" filter="url(#r-blur-lg)" opacity="0.9"/>
+  <ellipse cx="950"  cy="500" rx="300" ry="350" fill="#06111E" filter="url(#r-blur-lg)" opacity="0.8"/>
+  <ellipse cx="1350" cy="500" rx="200" ry="400" fill="#0C1A30" filter="url(#r-blur-lg)" opacity="0.6"/>
+  <ellipse cx="1050" cy="700" rx="350" ry="200" fill="#040C18" filter="url(#r-blur-md)" opacity="0.9"/>
+  <!-- Warm sunrise/sunset tone -->
+  <ellipse cx="900"  cy="200" rx="280" ry="180" fill="#2A1C08" filter="url(#r-blur-lg)" opacity="0.5"/>
+  <ellipse cx="1300" cy="80"  rx="220" ry="140" fill="#3A2808" filter="url(#r-blur-lg)" opacity="0.35"/>
+
+  <!-- Overlay -->
+  <rect width="1440" height="900" fill="url(#r-overlay)"/>
+  <rect width="1440" height="100" fill="url(#r-top)" opacity="0.55"/>
+  <rect x="0" y="760" width="1440" height="140" fill="url(#r-bottom)"/>
+
+  <!-- NAV -->
+  <rect width="1440" height="80" fill="url(#r-nav-bg)"/>
+  <text x="72" y="42" font-family="Georgia,'Times New Roman',serif" font-size="24" font-weight="normal" fill="#E8CC90" letter-spacing="6">METROPOLITAN</text>
+  <text x="73" y="60" font-family="Arial,sans-serif" font-size="8" fill="#6A5A38" letter-spacing="5">ЭЛИТНАЯ НЕДВИЖИМОСТЬ</text>
+
+  <text x="490" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AA9870" letter-spacing="1.5">Квартиры</text>
+  <text x="600" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AA9870" letter-spacing="1.5">Дома</text>
+  <text x="690" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AA9870" letter-spacing="1.5">Коммерческая</text>
+  <text x="870" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AA9870" letter-spacing="1.5">Ипотека</text>
+  <text x="980" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AA9870" letter-spacing="1.5">О нас</text>
+
+  <rect x="1248" y="22" width="168" height="38" rx="0" fill="none" stroke="#C8A870" stroke-width="1"/>
+  <text x="1332" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#C8A870" letter-spacing="2">ПОДОБРАТЬ ОБЪЕКТ</text>
+
+  <line x1="0" y1="80" x2="1440" y2="80" stroke="#C8A870" stroke-width="0.4" opacity="0.2"/>
+
+  <!-- HERO -->
+  <line x1="72" y1="170" x2="110" y2="170" stroke="#C8A870" stroke-width="1" opacity="0.6"/>
+  <text x="120" y="175" font-family="Arial,sans-serif" font-size="10" fill="#C8A870" letter-spacing="4">МОСКВА · ПРЕМИУМ КЛАСС</text>
+
+  <text x="72" y="285" font-family="Georgia,'Times New Roman',serif" font-size="88" font-weight="normal" fill="#F0EAD8" letter-spacing="-2">Найдите</text>
+  <text x="72" y="385" font-family="Georgia,'Times New Roman',serif" font-size="88" font-weight="normal" fill="#F0EAD8" letter-spacing="-2">недвижимость</text>
+  <text x="72" y="485" font-family="Georgia,'Times New Roman',serif" font-size="88" font-weight="normal" fill="url(#r-accent)" letter-spacing="-2">своей мечты</text>
+
+  <text x="72" y="530" font-family="Arial,sans-serif" font-size="14" fill="#8A7A58" letter-spacing="2">Первичное и вторичное жильё  ·  Проверка юристом  ·  Ипотека от 4.5%</text>
+
+  <line x1="72" y1="552" x2="460" y2="552" stroke="#C8A870" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- Search bar -->
+  <rect x="72" y="570" width="520" height="56" rx="0" fill="#0C0E12" stroke="#2A2618" stroke-width="1"/>
+  <text x="100" y="604" font-family="Arial,sans-serif" font-size="13" fill="#4A3E28">Город, район, адрес или ЖК...</text>
+  <rect x="528" y="570" width="64" height="56" fill="url(#r-accent)"/>
+  <text x="560" y="604" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#040608">⌕</text>
+
+  <!-- Filter chips -->
+  <rect x="72"  y="642" width="100" height="30" rx="15" fill="#0C0E12" stroke="#2A2618" stroke-width="1"/>
+  <text x="122" y="662" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#8A7A58" letter-spacing="1">Квартира</text>
+
+  <rect x="184" y="642" width="100" height="30" rx="15" fill="#0C0E12" stroke="#2A2618" stroke-width="1"/>
+  <text x="234" y="662" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#8A7A58" letter-spacing="1">1–5 комн.</text>
+
+  <rect x="296" y="642" width="130" height="30" rx="15" fill="#0C0E12" stroke="#2A2618" stroke-width="1"/>
+  <text x="361" y="662" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#8A7A58" letter-spacing="1">до 30 млн ₽</text>
+
+  <rect x="438" y="642" width="120" height="30" rx="15" fill="#0C0E12" stroke="#C8A870" stroke-width="1"/>
+  <text x="498" y="662" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#C8A870" letter-spacing="1">Новостройка</text>
+
+  <!-- Stats -->
+  <text x="72"  y="730" font-family="Georgia,serif" font-size="32" fill="#F0EAD8">4 800+</text>
+  <text x="72"  y="750" font-family="Arial,sans-serif" font-size="10" fill="#5A4A30" letter-spacing="2">ОБЪЕКТОВ</text>
+
+  <line x1="210" y1="718" x2="210" y2="760" stroke="#2A2210" stroke-width="1"/>
+  <text x="228"  y="730" font-family="Georgia,serif" font-size="32" fill="#F0EAD8">12 лет</text>
+  <text x="228"  y="750" font-family="Arial,sans-serif" font-size="10" fill="#5A4A30" letter-spacing="2">НА РЫНКЕ</text>
+
+  <line x1="390" y1="718" x2="390" y2="760" stroke="#2A2210" stroke-width="1"/>
+  <text x="408"  y="730" font-family="Georgia,serif" font-size="32" fill="#F0EAD8">98%</text>
+  <text x="408"  y="750" font-family="Arial,sans-serif" font-size="10" fill="#5A4A30" letter-spacing="2">ДОВОЛЬНЫХ</text>
+
+  <!-- Corner brackets -->
+  <line x1="1340" y1="100" x2="1420" y2="100" stroke="#C8A870" stroke-width="1" opacity="0.2"/>
+  <line x1="1420" y1="100" x2="1420" y2="180" stroke="#C8A870" stroke-width="1" opacity="0.2"/>
+  <line x1="1340" y1="800" x2="1420" y2="800" stroke="#C8A870" stroke-width="1" opacity="0.2"/>
+  <line x1="1420" y1="800" x2="1420" y2="720" stroke="#C8A870" stroke-width="1" opacity="0.2"/>
+
+  <!-- Bottom strip -->
+  <line x1="0" y1="820" x2="1440" y2="820" stroke="#C8A870" stroke-width="0.5" opacity="0.18"/>
+  <text x="250"  y="852" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#C8A870">01</text>
+  <text x="250"  y="872" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#5A4A30" letter-spacing="3">КВАРТИРЫ</text>
+  <line x1="500" y1="828" x2="500" y2="888" stroke="#C8A870" stroke-width="0.5" opacity="0.12"/>
+  <text x="720"  y="852" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#C8A870">02</text>
+  <text x="720"  y="872" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#5A4A30" letter-spacing="3">ЗАГОРОДНАЯ</text>
+  <line x1="940" y1="828" x2="940" y2="888" stroke="#C8A870" stroke-width="0.5" opacity="0.12"/>
+  <text x="1160" y="852" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#C8A870">03</text>
+  <text x="1160" y="872" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#5A4A30" letter-spacing="3">КОММЕРЧЕСКАЯ</text>
+</svg>

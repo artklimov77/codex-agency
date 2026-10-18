@@ -1,0 +1,124 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="s-blur-xl" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="75"/>
+    </filter>
+    <filter id="s-blur-lg" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+    <filter id="s-blur-md" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <linearGradient id="s-overlay" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#060408" stop-opacity="1"/>
+      <stop offset="38%" stop-color="#060408" stop-opacity="0.9"/>
+      <stop offset="62%" stop-color="#060408" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#060408" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="s-bottom" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#060408" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#060408" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="s-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#060408" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#060408" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="s-pink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#E040A0"/>
+      <stop offset="100%" stop-color="#FF80C8"/>
+    </linearGradient>
+    <linearGradient id="s-nav-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#060408" stop-opacity="0.97"/>
+      <stop offset="100%" stop-color="#060408" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- BG — fashion/luxury product feel -->
+  <rect width="1440" height="900" fill="#060408"/>
+
+  <ellipse cx="1100" cy="450" rx="620" ry="520" fill="#180810" filter="url(#s-blur-xl)"/>
+  <ellipse cx="1250" cy="200" rx="360" ry="260" fill="#300A20" filter="url(#s-blur-lg)" opacity="0.85"/>
+  <ellipse cx="950"  cy="600" rx="280" ry="260" fill="#200610" filter="url(#s-blur-lg)" opacity="0.8"/>
+  <ellipse cx="1350" cy="550" rx="200" ry="320" fill="#280814" filter="url(#s-blur-lg)" opacity="0.55"/>
+  <ellipse cx="800"  cy="750" rx="320" ry="180" fill="#140408" filter="url(#s-blur-md)" opacity="0.7"/>
+  <!-- Pink accent -->
+  <ellipse cx="1150" cy="320" rx="220" ry="160" fill="#A02060" filter="url(#s-blur-lg)" opacity="0.2"/>
+  <ellipse cx="1350" cy="150" rx="180" ry="130" fill="#C03080" filter="url(#s-blur-lg)" opacity="0.15"/>
+
+  <!-- Overlay -->
+  <rect width="1440" height="900" fill="url(#s-overlay)"/>
+  <rect width="1440" height="100" fill="url(#s-top)" opacity="0.55"/>
+  <rect x="0" y="760" width="1440" height="140" fill="url(#s-bottom)"/>
+
+  <!-- NAV -->
+  <rect width="1440" height="80" fill="url(#s-nav-bg)"/>
+  <text x="72" y="44" font-family="Georgia,'Times New Roman',serif" font-size="26" fill="#FFFFFF" letter-spacing="8">VELOUR</text>
+  <text x="73" y="61" font-family="Arial,sans-serif" font-size="8" fill="#5A3040" letter-spacing="5">FASHION STORE</text>
+
+  <text x="490" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AA88A0" letter-spacing="1.5">Новинки</text>
+  <text x="590" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AA88A0" letter-spacing="1.5">Женщинам</text>
+  <text x="710" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AA88A0" letter-spacing="1.5">Мужчинам</text>
+  <text x="840" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AA88A0" letter-spacing="1.5">Распродажа</text>
+  <text x="970" y="44" font-family="Arial,sans-serif" font-size="12" fill="#AA88A0" letter-spacing="1.5">О бренде</text>
+
+  <!-- Icons row -->
+  <text x="1260" y="46" font-family="Arial,sans-serif" font-size="18" fill="#AA88A0">♡</text>
+  <text x="1300" y="46" font-family="Arial,sans-serif" font-size="18" fill="#AA88A0">⊕</text>
+  <rect x="1330" y="26" width="10" height="10" rx="5" fill="#E040A0"/>
+  <text x="1336" y="46" font-family="Arial,sans-serif" font-size="18" fill="#AA88A0">🛍</text>
+
+  <line x1="0" y1="80" x2="1440" y2="80" stroke="#E040A0" stroke-width="0.4" opacity="0.2"/>
+
+  <!-- HERO -->
+  <text x="72" y="172" font-family="Arial,sans-serif" font-size="10" fill="#E040A0" letter-spacing="5">НОВАЯ КОЛЛЕКЦИЯ SS 2025</text>
+
+  <text x="72" y="280" font-family="Georgia,'Times New Roman',serif" font-size="92" font-weight="normal" fill="#F8F0F4" letter-spacing="-2">Стиль</text>
+  <text x="72" y="378" font-family="Georgia,'Times New Roman',serif" font-size="92" font-weight="normal" fill="#F8F0F4" letter-spacing="-2">без</text>
+  <text x="72" y="476" font-family="Georgia,'Times New Roman',serif" font-size="92" font-weight="normal" fill="url(#s-pink)" letter-spacing="-2">компромиссов</text>
+
+  <text x="72" y="524" font-family="Arial,sans-serif" font-size="14" fill="#7A5068" letter-spacing="2">Доставка за 24 часа  ·  Возврат 30 дней  ·  Оригинальные бренды</text>
+
+  <line x1="72" y1="544" x2="460" y2="544" stroke="#E040A0" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- CTAs -->
+  <rect x="72"  y="564" width="220" height="54" fill="url(#s-pink)"/>
+  <text x="182" y="596" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" letter-spacing="2">СМОТРЕТЬ КАТАЛОГ</text>
+
+  <rect x="306" y="564" width="200" height="54" fill="none" stroke="#5A3040" stroke-width="1"/>
+  <text x="406" y="596" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#AA88A0" letter-spacing="2">НОВИНКИ НЕДЕЛИ</text>
+
+  <!-- Promo badge -->
+  <ellipse cx="580" cy="564" rx="44" ry="44" fill="none" stroke="#E040A0" stroke-width="1" opacity="0.4"/>
+  <text x="580" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#E040A0" letter-spacing="1">СКИДКА</text>
+  <text x="580" y="572" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="#E040A0">30%</text>
+  <text x="580" y="585" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#7A3050">НА ВСЁ</text>
+
+  <!-- Product count + rating -->
+  <text x="72"  y="660" font-family="Georgia,serif" font-size="34" fill="#F8F0F4">8 400</text>
+  <text x="72"  y="680" font-family="Arial,sans-serif" font-size="10" fill="#5A3040" letter-spacing="2">ТОВАРОВ</text>
+
+  <line x1="220" y1="648" x2="220" y2="690" stroke="#3A1828" stroke-width="1"/>
+  <text x="238" y="660" font-family="Georgia,serif" font-size="34" fill="#F8F0F4">★ 4.9</text>
+  <text x="238" y="680" font-family="Arial,sans-serif" font-size="10" fill="#5A3040" letter-spacing="2">РЕЙТИНГ</text>
+
+  <line x1="420" y1="648" x2="420" y2="690" stroke="#3A1828" stroke-width="1"/>
+  <text x="438" y="660" font-family="Georgia,serif" font-size="34" fill="#F8F0F4">52k</text>
+  <text x="438" y="680" font-family="Arial,sans-serif" font-size="10" fill="#5A3040" letter-spacing="2">ПОКУПАТЕЛЕЙ</text>
+
+  <!-- Corner -->
+  <line x1="1340" y1="100" x2="1420" y2="100" stroke="#E040A0" stroke-width="1" opacity="0.18"/>
+  <line x1="1420" y1="100" x2="1420" y2="180" stroke="#E040A0" stroke-width="1" opacity="0.18"/>
+  <line x1="1340" y1="800" x2="1420" y2="800" stroke="#E040A0" stroke-width="1" opacity="0.18"/>
+  <line x1="1420" y1="800" x2="1420" y2="720" stroke="#E040A0" stroke-width="1" opacity="0.18"/>
+
+  <!-- Bottom strip -->
+  <line x1="0" y1="820" x2="1440" y2="820" stroke="#E040A0" stroke-width="0.5" opacity="0.15"/>
+  <text x="240"  y="852" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#E040A0">НОВИНКИ</text>
+  <text x="240"  y="870" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#5A3040" letter-spacing="2">КАЖДУЮ НЕДЕЛЮ</text>
+  <line x1="480" y1="828" x2="480" y2="888" stroke="#E040A0" stroke-width="0.5" opacity="0.12"/>
+  <text x="720"  y="852" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#E040A0">ДОСТАВКА</text>
+  <text x="720"  y="870" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#5A3040" letter-spacing="2">ДО 24 ЧАСОВ</text>
+  <line x1="960" y1="828" x2="960" y2="888" stroke="#E040A0" stroke-width="0.5" opacity="0.12"/>
+  <text x="1200" y="852" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#E040A0">ВОЗВРАТ</text>
+  <text x="1200" y="870" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#5A3040" letter-spacing="2">30 ДНЕЙ БЕЗ ВОПРОСОВ</text>
+</svg>

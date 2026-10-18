@@ -1,0 +1,162 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="blur-xl" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="70"/>
+    </filter>
+    <filter id="blur-lg" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="blur-md" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <linearGradient id="dark-left" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#040302" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#040302" stop-opacity="0.88"/>
+      <stop offset="75%" stop-color="#040302" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#040302" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="bottom-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#040302" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#040302" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="top-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#040302" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#040302" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#C49030"/>
+      <stop offset="100%" stop-color="#ECC860"/>
+    </linearGradient>
+    <linearGradient id="nav-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#040302" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#040302" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ═══════════ BACKGROUND — WARM PHOTO SIMULATION ═══════════ -->
+
+  <rect width="1440" height="900" fill="#060402"/>
+
+  <!-- Main warm food/table blob -->
+  <ellipse cx="1080" cy="490" rx="580" ry="480" fill="#7B3A0C" filter="url(#blur-xl)"/>
+
+  <!-- Candlelight / surface highlight -->
+  <ellipse cx="920"  cy="260" rx="300" ry="240" fill="#BA6C10" filter="url(#blur-lg)" opacity="0.75"/>
+
+  <!-- Dark plate/dish centre -->
+  <ellipse cx="1060" cy="510" rx="220" ry="190" fill="#2E1204" filter="url(#blur-lg)" opacity="0.85"/>
+
+  <!-- Highlight rim of plate -->
+  <ellipse cx="1060" cy="510" rx="220" ry="190" fill="#A05018" filter="url(#blur-md)" opacity="0.25"/>
+
+  <!-- Herb / garnish green -->
+  <ellipse cx="1310" cy="680" rx="220" ry="180" fill="#1C3A10" filter="url(#blur-lg)" opacity="0.8"/>
+
+  <!-- Wine / liquid warmth top right -->
+  <ellipse cx="1350" cy="200" rx="180" ry="150" fill="#7A2010" filter="url(#blur-lg)" opacity="0.5"/>
+
+  <!-- Warm ambient fill right edge -->
+  <ellipse cx="1420" cy="460" rx="160" ry="400" fill="#6A3008" filter="url(#blur-lg)" opacity="0.4"/>
+
+  <!-- Dark overlay for text readability -->
+  <rect width="1440" height="900" fill="url(#dark-left)"/>
+
+  <!-- Top vignette -->
+  <rect width="1440" height="120" fill="url(#top-fade)" opacity="0.7"/>
+
+  <!-- Bottom vignette -->
+  <rect x="0" y="760" width="1440" height="140" fill="url(#bottom-fade)"/>
+
+
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+
+  <rect width="1440" height="80" fill="url(#nav-bg)"/>
+
+  <!-- Logo -->
+  <text x="72" y="42" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="normal" fill="#D4A853" letter-spacing="8">VERANDA</text>
+  <text x="73" y="60" font-family="Arial,sans-serif" font-size="9"  fill="#8A7050" letter-spacing="5">АВТОРСКИЙ РЕСТОРАН</text>
+
+  <!-- Nav links -->
+  <text x="520" y="44" font-family="Arial,sans-serif" font-size="13" fill="#C8B890" letter-spacing="1.5">Меню</text>
+  <text x="620" y="44" font-family="Arial,sans-serif" font-size="13" fill="#C8B890" letter-spacing="1.5">О нас</text>
+  <text x="720" y="44" font-family="Arial,sans-serif" font-size="13" fill="#C8B890" letter-spacing="1.5">Мероприятия</text>
+  <text x="900" y="44" font-family="Arial,sans-serif" font-size="13" fill="#C8B890" letter-spacing="1.5">Контакты</text>
+
+  <!-- Reserve button -->
+  <rect x="1252" y="22" width="164" height="38" rx="0" fill="none" stroke="#D4A853" stroke-width="1"/>
+  <text x="1334" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#D4A853" letter-spacing="2">ЗАБРОНИРОВАТЬ</text>
+
+  <!-- Nav divider -->
+  <line x1="0" y1="80" x2="1440" y2="80" stroke="#D4A853" stroke-width="0.4" opacity="0.25"/>
+
+
+  <!-- ═══════════ HERO CONTENT ═══════════ -->
+
+  <!-- Category tag -->
+  <line x1="72" y1="170" x2="115" y2="170" stroke="#D4A853" stroke-width="1" opacity="0.7"/>
+  <text x="124" y="175" font-family="Arial,sans-serif" font-size="11" fill="#D4A853" letter-spacing="4">АВТОРСКАЯ КУХНЯ · МОСКВА</text>
+
+  <!-- Main headline -->
+  <text x="72" y="278" font-family="Georgia,'Times New Roman',serif" font-size="94" font-weight="normal" fill="#F8F2E6" letter-spacing="-2">Место, где</text>
+  <text x="72" y="378" font-family="Georgia,'Times New Roman',serif" font-size="94" font-weight="normal" fill="#F8F2E6" letter-spacing="-2">каждый ужин</text>
+  <text x="72" y="478" font-family="Georgia,'Times New Roman',serif" font-size="94" font-weight="normal" fill="url(#gold-grad)" letter-spacing="-2">запоминается</text>
+
+  <!-- Subtitle -->
+  <text x="72" y="528" font-family="Arial,sans-serif" font-size="15" fill="#9A8A6C" letter-spacing="2.5">Авторская кухня  ·  Живая музыка  ·  Панорамный вид</text>
+
+  <!-- Thin line after subtitle -->
+  <line x1="72" y1="550" x2="440" y2="550" stroke="#D4A853" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- CTA Buttons -->
+  <!-- Primary -->
+  <rect x="72"  y="572" width="230" height="54" fill="url(#gold-grad)"/>
+  <text x="187" y="604" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#1A0A00" letter-spacing="2">ЗАБРОНИРОВАТЬ СТОЛ</text>
+
+  <!-- Secondary -->
+  <rect x="318" y="572" width="210" height="54" fill="none" stroke="#8A7A5C" stroke-width="1"/>
+  <text x="423" y="604" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#C8B890" letter-spacing="2">ПОСМОТРЕТЬ МЕНЮ</text>
+
+  <!-- Stars + reviews -->
+  <text x="72"  y="672" font-family="Arial,sans-serif" font-size="22" fill="#D4A853">★★★★★</text>
+  <text x="200" y="672" font-family="Arial,sans-serif" font-size="13" fill="#7A6A50">1 240 отзывов · Яндекс Карты</text>
+
+  <!-- Scroll hint -->
+  <line x1="720" y1="830" x2="720" y2="870" stroke="#D4A853" stroke-width="1" opacity="0.4"/>
+  <polygon points="714,858 726,858 720,870" fill="#D4A853" opacity="0.4"/>
+  <text x="720" y="822" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#6A5A40" letter-spacing="3">ЛИСТАТЬ</text>
+
+
+  <!-- ═══════════ DECORATIVE FRAME ELEMENTS ═══════════ -->
+
+  <!-- Top-right corner bracket -->
+  <line x1="1340" y1="100" x2="1420" y2="100" stroke="#D4A853" stroke-width="1" opacity="0.25"/>
+  <line x1="1420" y1="100" x2="1420" y2="180" stroke="#D4A853" stroke-width="1" opacity="0.25"/>
+
+  <!-- Bottom-right corner bracket -->
+  <line x1="1340" y1="800" x2="1420" y2="800" stroke="#D4A853" stroke-width="1" opacity="0.25"/>
+  <line x1="1420" y1="800" x2="1420" y2="720" stroke="#D4A853" stroke-width="1" opacity="0.25"/>
+
+  <!-- Vertical accent line -->
+  <line x1="820" y1="140" x2="820" y2="760" stroke="#D4A853" stroke-width="0.5" opacity="0.08"/>
+
+
+  <!-- ═══════════ BOTTOM TEASER STRIP ═══════════ -->
+
+  <rect x="0" y="820" width="1440" height="80" fill="#06040200" opacity="0.95"/>
+  <line x1="0" y1="820" x2="1440" y2="820" stroke="#D4A853" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- 3 pillars -->
+  <text x="250"  y="852" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#D4A853" letter-spacing="0.5">01</text>
+  <text x="250"  y="872" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#6A5A42" letter-spacing="3">АВТОРСКОЕ МЕНЮ</text>
+
+  <line x1="600" y1="828" x2="600" y2="888" stroke="#D4A853" stroke-width="0.5" opacity="0.15"/>
+
+  <text x="720"  y="852" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#D4A853" letter-spacing="0.5">02</text>
+  <text x="720"  y="872" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#6A5A42" letter-spacing="3">ЖИВАЯ МУЗЫКА</text>
+
+  <line x1="840" y1="828" x2="840" y2="888" stroke="#D4A853" stroke-width="0.5" opacity="0.15"/>
+
+  <text x="1140" y="852" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#D4A853" letter-spacing="0.5">03</text>
+  <text x="1140" y="872" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#6A5A42" letter-spacing="3">ПАНОРАМНЫЙ ВИД</text>
+
+</svg>

@@ -107,7 +107,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-8 mt-10 border-t border-line">
-            <p className="text-sm text-subtle">© {new Date().getFullYear()} Codex. Все права защищены.</p>
+            <p className="text-sm text-subtle">© {new Date().getFullYear()} RuneWorks. Все права защищены.</p>
             <p className="text-xs text-subtle">Работаем как самозанятый / ИП</p>
           </div>
         </div>

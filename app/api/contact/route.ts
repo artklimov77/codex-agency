@@ -22,7 +22,7 @@ export async function POST(req: Request) {
   }
 
   const text = [
-    '🔔 <b>Новая заявка с сайта Codex</b>',
+    '🔔 <b>Новая заявка с сайта RuneWorks</b>',
     '',
     `👤 <b>Имя:</b> ${escapeHtml(name)}`,
     `📱 <b>Контакт:</b> ${escapeHtml(contact)}`,

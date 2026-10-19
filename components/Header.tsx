@@ -45,7 +45,7 @@ export default function Header() {
 
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <a href="#contact" className="hidden lg:inline-flex btn-primary text-sm !py-2.5 !px-5">
+            <a href="/#contact" className="hidden lg:inline-flex btn-primary text-sm !py-2.5 !px-5">
               Обсудить проект
             </a>
             <button
@@ -83,7 +83,7 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 className="btn-primary w-full mt-4 mb-2"
                 onClick={() => setMenuOpen(false)}
               >

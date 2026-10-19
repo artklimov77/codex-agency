@@ -21,3 +21,6 @@ next-env.d.ts
 
 # scripts (не нужны в проде)
 scripts/
+
+# build info
+tsconfig.tsbuildinfo

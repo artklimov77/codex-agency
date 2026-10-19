@@ -10,15 +10,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://codex-it.site'),
-  title: 'Codex — Цифровые системы для бизнеса',
+  title: 'RuneWorks — Цифровые системы для бизнеса',
   description:
-    'Codex разрабатывает сайты, CRM-системы, автоматизацию и корпоративные решения. Не просто сайт — система, которая приносит клиентов.',
+    'RuneWorks разрабатывает сайты, CRM-системы, автоматизацию и корпоративные решения. Не просто сайт — система, которая приносит клиентов.',
   keywords: 'разработка сайтов, CRM, автоматизация бизнеса, веб-разработка, IT-агентство',
   openGraph: {
-    title: 'Codex — Цифровые системы для бизнеса',
+    title: 'RuneWorks — Цифровые системы для бизнеса',
     description: 'Вашему бизнесу не нужен сайт. Ему нужны клиенты.',
     url: 'https://codex-it.site',
-    siteName: 'Codex',
+    siteName: 'RuneWorks',
     type: 'website',
     locale: 'ru_RU',
     images: [{ url: '/kwork-landing.jpg', width: 690, height: 518 }],

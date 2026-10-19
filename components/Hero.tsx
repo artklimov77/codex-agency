@@ -42,7 +42,7 @@ export default function Hero() {
           Вашему бизнесу
           <br />
           не&nbsp;нужен сайт.
-          <span className="block text-gradient mt-1 md:mt-2">Ему нужны клиенты.</span>
+          <span className="block text-gradient mt-1 md:mt-2 leading-[1.12] pb-[0.1em]">Ему нужны клиенты.</span>
         </motion.h1>
 
         <motion.p
@@ -52,7 +52,7 @@ export default function Hero() {
           custom={0.2}
           className="text-base md:text-xl max-w-[640px] mx-auto mb-8 md:mb-10 leading-relaxed text-muted"
         >
-          Codex создаёт цифровые системы — от лендинга до корпоративного портала.
+          RuneWorks создаёт цифровые системы — от лендинга до корпоративного портала.
           Результат: поток клиентов, автоматизация продаж, рост бизнеса.
         </motion.p>
 

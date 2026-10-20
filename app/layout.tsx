@@ -9,7 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://codex-it.site'),
+  metadataBase: new URL('https://www.runeworks.ru'),
   title: 'RuneWorks — Цифровые системы для бизнеса',
   description:
     'RuneWorks разрабатывает сайты, CRM-системы, автоматизацию и корпоративные решения. Не просто сайт — система, которая приносит клиентов.',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'RuneWorks — Цифровые системы для бизнеса',
     description: 'Вашему бизнесу не нужен сайт. Ему нужны клиенты.',
-    url: 'https://codex-it.site',
+    url: 'https://www.runeworks.ru',
     siteName: 'RuneWorks',
     type: 'website',
     locale: 'ru_RU',

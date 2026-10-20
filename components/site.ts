@@ -1,6 +1,6 @@
 export const CONTACTS = {
-  telegram: '@codex_business',
-  telegramUrl: 'https://t.me/codex_business',
+  telegram: '@runeworks',
+  telegramUrl: 'https://t.me/runeworks',
   phone: '+7 (960) 093-00-54',
   phoneHref: 'tel:+79600930054',
 }

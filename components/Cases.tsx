@@ -47,7 +47,7 @@ export default function Cases() {
             <h2 className="text-[32px] leading-[1.1] md:text-5xl font-bold tracking-tight text-fg">Что мы уже сделали</h2>
           </div>
           <p className="text-base max-w-sm text-muted">
-            Реальные задачи, реальные результаты. Не портфолио ради красоты — конкретные цифры.
+            Реальные задачи и измеримый результат в цифрах: заявки, конверсия, сэкономленное время.
           </p>
         </Reveal>
 

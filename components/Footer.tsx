@@ -45,11 +45,11 @@ export default function Footer() {
         <div className="container py-12 md:py-16">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
             <div className="col-span-2 lg:col-span-1">
-              <Logo className="mb-4" />
+              <Logo className="mb-5" runes />
               <p className="text-sm leading-relaxed text-muted mb-5">
-                Цифровые системы для бизнеса.
+                Цифровые системы для бизнеса:
                 <br />
-                Не сайты — инструменты роста.
+                сайты, магазины, боты и автоматизация.
               </p>
               <div className="flex flex-col gap-3">
                 <a
@@ -108,7 +108,12 @@ export default function Footer() {
 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-8 mt-10 border-t border-line">
             <p className="text-sm text-subtle">© {new Date().getFullYear()} RuneWorks. Все права защищены.</p>
-            <p className="text-xs text-subtle">Работаем как самозанятый / ИП</p>
+            <div className="flex items-center gap-4">
+              <a href="/privacy" className="text-xs text-subtle hover:text-fg transition-colors">
+                Политика данных
+              </a>
+              <span className="text-xs text-subtle">Работаем как самозанятый</span>
+            </div>
           </div>
         </div>
       </div>

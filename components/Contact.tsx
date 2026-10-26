@@ -162,7 +162,10 @@ export default function Contact() {
                   </button>
 
                   <p className="text-xs text-center text-subtle">
-                    Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+                    Нажимая кнопку, вы соглашаетесь с{' '}
+                    <a href="/privacy" className="underline hover:text-fg transition-colors">
+                      политикой обработки персональных данных
+                    </a>
                   </p>
                 </form>
               )}

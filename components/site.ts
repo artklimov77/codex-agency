@@ -7,6 +7,7 @@ export const CONTACTS = {
 
 export const NAV_LINKS = [
   { label: 'Услуги', href: '/uslugi' },
+  { label: 'AI и боты', href: '/ai' },
   { label: 'Портфолио', href: '/portfolio' },
   { label: 'Кейсы', href: '/#cases' },
   { label: 'Как работаем', href: '/#process' },

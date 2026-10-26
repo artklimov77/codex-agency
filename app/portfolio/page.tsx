@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Contact from '@/components/Contact'
 import Reveal from '@/components/Reveal'
+import CaseMedia from '@/components/CaseMedia'
 import { PORTFOLIO } from '@/components/portfolio-data'
 
 export const metadata: Metadata = {
@@ -40,13 +40,7 @@ export default function PortfolioPage() {
                 <Reveal key={w.slug} delay={(i % 2) * 0.05}>
                   <Link href={`/portfolio/${w.slug}`} className="group card rounded-2xl overflow-hidden block h-full">
                     <div className="relative aspect-[16/10] overflow-hidden bg-black">
-                      <Image
-                        src={w.image}
-                        alt={w.tagline}
-                        fill
-                        sizes="(min-width: 768px) 50vw, 100vw"
-                        className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-                      />
+                      <CaseMedia c={w} zoom sizes="(min-width: 768px) 50vw, 100vw" />
                     </div>
                     <div className="p-5 md:p-6">
                       <div className="flex items-center gap-2 mb-2">

@@ -1,8 +1,8 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
+import CaseMedia from './CaseMedia'
 import { PORTFOLIO } from './portfolio-data'
 
 export default function Portfolio() {
@@ -18,18 +18,16 @@ export default function Portfolio() {
 
         <div className="grid md:grid-cols-2 gap-4 md:gap-6">
           {items.map((w, i) => (
-            <Reveal key={w.slug} delay={i * 0.05}>
+            <Reveal key={w.slug} delay={i * 0.05} className={i === 0 ? 'md:col-span-2' : ''}>
               <Link
                 href={`/portfolio/${w.slug}`}
-                className={`group card rounded-2xl overflow-hidden block ${i === 0 ? 'md:col-span-2' : ''}`}
+                className="group card rounded-2xl overflow-hidden block h-full"
               >
                 <div className={`relative overflow-hidden bg-black ${i === 0 ? 'aspect-[16/9] md:aspect-[16/7]' : 'aspect-[16/10]'}`}>
-                  <Image
-                    src={w.image}
-                    alt={w.tagline}
-                    fill
+                  <CaseMedia
+                    c={w}
+                    zoom
                     sizes={i === 0 ? '(min-width: 1200px) 1136px, 100vw' : '(min-width: 768px) 50vw, 100vw'}
-                    className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 </div>
                 <div className="p-5 md:p-6">

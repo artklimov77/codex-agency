@@ -1,10 +1,24 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, JetBrains_Mono, Noto_Sans_Runic } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
   variable: '--font-inter',
+  display: 'swap',
+})
+
+const logoFont = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['700'],
+  variable: '--font-logo',
+  display: 'swap',
+})
+
+const runicFont = Noto_Sans_Runic({
+  subsets: ['runic'],
+  weight: '400',
+  variable: '--font-runic',
   display: 'swap',
 })
 
@@ -21,7 +35,6 @@ export const metadata: Metadata = {
     siteName: 'RuneWorks',
     type: 'website',
     locale: 'ru_RU',
-    images: [{ url: '/kwork-landing.jpg', width: 690, height: 518 }],
   },
 }
 
@@ -37,7 +50,7 @@ const themeScript = `try{if(localStorage.getItem('theme')==='dark')document.docu
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ru" className={inter.variable} suppressHydrationWarning>
+    <html lang="ru" className={`${inter.variable} ${logoFont.variable} ${runicFont.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

@@ -32,6 +32,8 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
         mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+        logo: ['var(--font-logo)', 'ui-monospace', 'monospace'],
+        runic: ['var(--font-runic)', 'Segoe UI Historic', 'serif'],
       },
       boxShadow: {
         card: 'var(--shadow)',

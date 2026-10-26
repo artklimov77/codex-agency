@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowLeft, ArrowRight, Check } from 'lucide-react'
@@ -7,6 +6,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Contact from '@/components/Contact'
 import Reveal from '@/components/Reveal'
+import CaseMedia from '@/components/CaseMedia'
 import { PORTFOLIO, getCase } from '@/components/portfolio-data'
 
 export function generateStaticParams() {
@@ -20,7 +20,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${c.name} — кейс RuneWorks`,
     description: c.summary,
-    openGraph: { title: `${c.name} — ${c.tagline}`, description: c.summary, images: [{ url: c.image }] },
+    openGraph: {
+      title: `${c.name} — ${c.tagline}`,
+      description: c.summary,
+      ...(c.image ? { images: [{ url: c.image }] } : {}),
+    },
   }
 }
 
@@ -56,7 +60,7 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
           <div className="container max-w-5xl">
             <Reveal className="rounded-2xl overflow-hidden border border-line shadow-card bg-black">
               <div className="relative aspect-[16/10]">
-                <Image src={c.image} alt={c.tagline} fill sizes="(min-width: 1200px) 1024px, 100vw" className="object-cover object-top" priority />
+                <CaseMedia c={c} priority sizes="(min-width: 1200px) 1024px, 100vw" />
               </div>
             </Reveal>
           </div>
@@ -138,7 +142,7 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
               {others.map((w) => (
                 <Link key={w.slug} href={`/portfolio/${w.slug}`} className="group card rounded-2xl overflow-hidden block">
                   <div className="relative aspect-[16/10] overflow-hidden bg-black">
-                    <Image src={w.image} alt={w.tagline} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]" />
+                    <CaseMedia c={w} zoom sizes="(min-width: 768px) 33vw, 100vw" />
                   </div>
                   <div className="p-4">
                     <p className="text-xs font-semibold uppercase tracking-wider text-subtle mb-1">{w.niche}</p>

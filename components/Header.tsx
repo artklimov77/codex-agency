@@ -29,7 +29,7 @@ export default function Header() {
     >
       <div className="container">
         <div className="flex items-center justify-between h-16 md:h-[72px] gap-4">
-          <Logo />
+          <Logo typing />
 
           <nav className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
